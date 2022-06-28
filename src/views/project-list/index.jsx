@@ -8,14 +8,13 @@ import { clearObj, useDebounce, useMount } from "utils";
 const baseUrl = process.env.REACT_APP_API_URL;
 
 export const ProjectList = () => {
-    console.log(111)
   const [param, setParam] = useState({
     name: "",
     personId: "",
   });
   const [users, setUsers] = useState([]);
   const [lists, setLists] = useState([]);
-  const debounceParam = useDebounce(param, 500)
+  const debounceParam = useDebounce(param, 500);
 
   useEffect(() => {
     fetch(`${baseUrl}/projects?${qs.stringify(clearObj(debounceParam))}`).then(
