@@ -1,6 +1,16 @@
 import React from "react";
+import { User } from "./DataTable";
 
-export const SearchQuery = ({ param, setParam, users }) => {
+interface SearchQueryProps {
+  param: {
+    name: string;
+    personId: string;
+  };
+  setParam: (param: SearchQueryProps["param"]) => void;
+  users: User[];
+}
+
+export const SearchQuery = ({ param, setParam, users }: SearchQueryProps) => {
   return (
     <form>
       <input

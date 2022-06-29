@@ -1,5 +1,23 @@
 import React from "react";
-export const DataTable = ({ lists, users }) => {
+
+export interface User {
+  id: number;
+  name: string;
+}
+
+interface Project {
+  id: number;
+  name: string;
+  personId: number;
+  organization: string;
+}
+
+interface DataTableProps {
+  lists: Project[];
+  users: User[];
+}
+
+export const DataTable = ({ lists, users }: DataTableProps) => {
   return (
     <table>
       <thead>
