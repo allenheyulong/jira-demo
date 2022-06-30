@@ -1,5 +1,5 @@
 import React from "react";
-import { useArray, useMount } from "utils";
+import { useArray } from "utils";
 
 export const TryUseTest = () => {
   const person: {
